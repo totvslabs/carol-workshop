@@ -1,0 +1,27 @@
+{
+  "batch": {
+    "processes": [
+      {
+        "algorithmDescription": {
+          "en-US": "Predict the customer status"
+        },
+        "algorithmName": "prediction",
+        "algorithmTitle": {
+          "en-US": "Predict the customer status"
+        },
+        "instanceProperties": {
+          "luigi": {
+            "workers": "1"
+          },
+          "profile": "",
+          "properties": {
+            "dockerImage": "carol/base-batch",
+            "instanceMemory": "150M",
+            "instanceVCPUs": "0.5"
+          }
+        },
+        "name": "testbatch"
+      }
+    ]
+  }
+}

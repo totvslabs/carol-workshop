@@ -1,0 +1,25 @@
+{
+  "online": {
+    "processes": [
+      {
+        "name": "onlineapp",
+        "algorithmName": "run_me",
+        "namespace": "",
+        "algorithmTitle": {
+          "en-US": "Demo service"
+        },
+        "algorithmDescription": {
+          "en-US": "Basic algorithm"
+        },
+        "instanceProperties": {
+          "profile": "",
+          "properties": {
+            "dockerImage": "carol/base-online",
+            "instanceMemory": "1",
+            "instanceVCPUs": "4"
+          }
+        }
+      }
+    ]
+  }
+}

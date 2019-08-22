@@ -1,0 +1,10 @@
+{
+  "connectorId": "3ee28ab0b89611e9944e42010a840086",
+  "subdomain": "robworkshop",
+  "/api/*": {
+      "target": "https://robworkshop.carol.ai",
+      "secure": true,
+      "logLevel": "debug",
+      "changeOrigin": true
+  }
+}

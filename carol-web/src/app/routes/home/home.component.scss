@@ -1,0 +1,42 @@
+#grid-container {
+  margin-top: 15px;
+}
+
+#widget-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#buttons-container {
+  margin: 10px 0;
+}
+
+::ng-deep .thf-button {
+  margin-right: 5px;
+}
+
+::ng-deep #left-graph {
+  width: 50%;
+}
+
+::ng-deep #right-graph {
+  width: 50%;
+  margin-left: 5px;
+}
+
+.insight-container {
+  height: 360px;
+  padding-top: 20px;
+}
+
+#title {
+  font-size: 18px;
+}
+
+#value {
+  font-size: 50px;
+  display: flex;
+  margin-top: 15%;
+  justify-content: center;
+  font-weight: bold;
+}
