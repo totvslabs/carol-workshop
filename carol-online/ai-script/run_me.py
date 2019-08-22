@@ -11,7 +11,7 @@ from pycarol.app.online_api import request
 online = Online()
 
 @online.route("hello_world")
-def hello_world(arg):
+def hello_world():
     print(arg)
     message = {
         'message': 'Hello World'
@@ -19,14 +19,14 @@ def hello_world(arg):
     return message
 
 @online.route("predict")
-def predict(arg):
+def predict():
     result = {
         'score': random.randint(1,9)
     }
     return result
 
 @online.route("sum")
-def sum(arg):
+def sum():
     total = 0;
     print(request)
 
