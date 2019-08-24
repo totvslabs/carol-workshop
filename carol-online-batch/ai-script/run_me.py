@@ -32,23 +32,9 @@ def hello_world():
 
 @online.route("listcustomers")
 def list_customers():
-    jsons = {
-    "mustList": [
-        {
-        "mdmFilterType": "TYPE_FILTER",
-        "mdmValue": "mdmcustomerGolden"
-        }
-    ]
-    }
-
-    query = Query(carol_instance, get_aggs=False, scrollable=True, only_hits=True, page_size=10, max_hits=10, sort_by="mdmGoldenFieldAndValues.mdmname.raw")
-    query.query(jsons).go()
-    data = query.results
-    return data
-
-	# query = Query(carol=carol_instance)
-	# data = query.all(dm_name="mdmcustomer").go().results
-	# return data
+	query = Query(carol=carol_instance)
+	data = query.all(dm_name="mdmcustomer").go().results
+	return data
 
 @online.route("predict")
 def predict():

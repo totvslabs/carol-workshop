@@ -28,23 +28,23 @@ gunicorn -w 1 -b :5000 run_me
 These endpoints will be available for all Online Carol App:
 
 ```
-http://localhost:5000/domain/name/version/name/statusz
-http://localhost:5000/domain/name/version/name/logs
-http://localhost:5000/domain/name/version/name/healthz
+http://localhost:5000/statusz
+http://localhost:5000/logs
+http://localhost:5000/healthz
 ```
 
 Based on provided sample, these URLs will be available:
 
 ```
-http://localhost:5000/domain/name/version/name/api/hello_world
-http://localhost:5000/domain/name/version/name/api/predict
-http://localhost:5000/domain/name/version/name/api/sum?a=1&b=2
+http://localhost:5000/api/hello_world
+http://localhost:5000/api/predict
+http://localhost:5000/api/sum?a=1&b=2
 ```
 
 Example how to call the endpoint `sum` (curl):
 
 ```
-curl -X GET 'http://localhost:5000/domain/name/version/name/api/sum?a=1&b=33'
+curl -X GET 'http://localhost:5000/api/sum?a=1&b=33'
 ```
 
 
@@ -56,7 +56,7 @@ You should create a Carol App and send the resource to Carol.
 After deployed the Carol App and started the service, the final URL will follow this structure:
 
 ```
-http://robworkshop-workshop201908test-1-0-0-onlineapp.apps.carol.ai/api/
+https://robworkshop-workshop201908test-1-0-0.apps.carol.ai/api/
 https://robsonprod-cvtest-computer-vision-services-1-0-0.apps.carol.ai
 ```
 

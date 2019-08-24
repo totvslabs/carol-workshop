@@ -1,0 +1,50 @@
+{
+  "batch": {
+    "processes": [
+      {
+        "algorithmDescription": {
+          "en-US": "Predict the customer status"
+        },
+        "algorithmName": "prediction",
+        "algorithmTitle": {
+          "en-US": "Predict the customer status"
+        },
+        "instanceProperties": {
+          "luigi": {
+            "workers": "1"
+          },
+          "profile": "",
+          "properties": {
+            "dockerImage": "carol/base-batch",
+            "instanceMemory": "150M",
+            "instanceVCPUs": "0.5"
+          }
+        },
+        "name": "testbatch"
+      }
+    ]
+  },
+  "online": {
+    "processes": [
+      {
+        "name": "onlineapp",
+        "algorithmName": "run_me",
+        "namespace": "",
+        "algorithmTitle": {
+          "en-US": "Demo service"
+        },
+        "algorithmDescription": {
+          "en-US": "Basic algorithm"
+        },
+        "instanceProperties": {
+          "profile": "",
+          "properties": {
+            "dockerImage": "carol/base-online",
+            "instanceMemory": "1",
+            "instanceVCPUs": "4"
+          }
+        }
+      }
+    ]
+  }
+}
