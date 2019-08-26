@@ -2,22 +2,23 @@ Preparing the environment to run the application locally
 ---
 
 Recommended to create an environment to install the needed libraries for your Carol App.
-Make sure you have the following dependencies installed on your environment:
+Make sure you have the following dependencies installed on your environment (pip install):
 - pycarol
 - websocket-client2
 - pandas
+- gunicorn
 
 
 Running the application locally
 ---
 
-On the Python file with the endpoints (the one on the manifest file), uncomment the next line:
+Before running the application locally, make sure you have these variables defined:
 
-```
-application = OnlineApi('run_me').get_api()
-```
-
-The previous line is pointing the Python file that has the services.
+export CAROLCONNECTORID=d0b51e50c2e911e99fe442010a84001b
+export CAROLAPPNAME=sample
+export CAROLAPPOAUTH=a1d532e0c2f911e99fe442010a84001b
+export LONGTASKID=TBD
+export CAROLDOMAIN=robworkshop
 
 After, run the following command to start the server:
 
