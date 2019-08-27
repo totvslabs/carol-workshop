@@ -44,13 +44,14 @@ def run():
 	print(">>>>> data read from carol: ")
 	for row in data:
 		print(row)
-		predictedData.append({
-			'date': datetime.now().replace(microsecond=0).isoformat(),
-			'taxid': row['mdmtaxid'],
-			'customerid': row['mdmcustomerid'],
-			'name': row['mdmname'],
-			'risk': (random.randint(1,9))/9
-			})
+		if("mdmtaxid" in row):
+			predictedData.append({
+				'date': datetime.now().replace(microsecond=0).isoformat(),
+				'taxid': row['mdmtaxid'],
+				'customerid': row['mdmcustomerid'],
+				'name': row['mdmname'],
+				'risk': (random.randint(1,9))/9
+				})
 
 	print(">>>>> data generated: ")
 	for row in predictedData:
