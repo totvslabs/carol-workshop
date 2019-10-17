@@ -4,6 +4,7 @@ import { carol } from '@carol/carol-sdk/lib/carol';
 import { ThfToolbarProfile } from '@totvs/thf-ui/components/thf-toolbar';
 import * as moment from 'moment';
 import { Observable, Observer } from 'rxjs';
+import { utils } from '@carol/carol-sdk/lib/utils';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,15 @@ export class AuthService {
 
   setSession(authResult, user) {
     carol.setAuthToken(authResult['access_token']);
+
+    let tokenName;
+    if (utils.getOrganization()) {
+      tokenName = `carol-${utils.getOrganization()}-${utils.getEnvironment()}-token`;
+    } else {
+      tokenName = 'carol-token';
+    }
+
+    localStorage.setItem(tokenName, authResult['access_token']);
     localStorage.setItem('user', user);
 
     const expiresAt = moment().add(authResult['expires_in'], 'second');
@@ -76,4 +86,3 @@ export class AuthService {
     };
   }
 }
-

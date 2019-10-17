@@ -1,5 +1,5 @@
 {
-  "name": "fiep-demo-web",
+  "name": "seed-carol-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,13 +22,12 @@
     "@angular/platform-browser-dynamic": "7.1.3",
     "@angular/platform-server": "7.1.3",
     "@angular/router": "7.1.3",
-    "@carol/carol-sdk": "0.1.1",
     "@totvs/thf-kendo": "^3.21.0",
     "@totvs/thf-templates": "^3.21.0",
     "@totvs/thf-ui": "^3.21.0",
+    "@carol/carol-sdk": "0.1.2",
     "core-js": "^2.5.4",
     "moment": "^2.24.0",
-    "ng2-date-picker": "^2.12.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

@@ -1,8 +1,9 @@
 {
-  "connectorId": "3ee28ab0b89611e9944e42010a840086",
-  "subdomain": "robworkshop",
+  "connectorId": "0a0829172fc2433c9aa26460c31b78f0",
+  "organization": "totvs2",
+  "environment": "totvslabs2",
   "/api/*": {
-      "target": "https://robworkshop.carol.ai",
+      "target": "https://totvs2.qarol.ai",
       "secure": true,
       "logLevel": "debug",
       "changeOrigin": true
