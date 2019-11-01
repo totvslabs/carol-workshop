@@ -1,0 +1,547 @@
+{
+    "applicationName": "webapp",
+    "applicationVersion": null,
+    "connectorName": "webapp",
+    "connectorVersion": null,
+    "embeddedMappingsMap": {},
+    "entityMappingName": null,
+    "entityTemplateName": "mdmcustomer",
+    "fieldMappings": [
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "citytaxid"
+            ],
+            "targetFieldName": "mdmcitytaxid"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "taxid"
+            ],
+            "targetFieldName": "mdmtaxid"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "name"
+            ],
+            "targetFieldName": "mdmname"
+        },
+        {
+            "childFieldMappings": [
+                {
+                    "childFieldMappings": [],
+                    "fieldCleanseRules": [],
+                    "instanceId": "",
+                    "parentFieldMappingId": null,
+                    "sourceFieldNames": [
+                        "address1"
+                    ],
+                    "targetFieldName": "mdmaddress1"
+                },
+                {
+                    "childFieldMappings": [],
+                    "fieldCleanseRules": [],
+                    "instanceId": "",
+                    "parentFieldMappingId": null,
+                    "sourceFieldNames": [
+                        "state"
+                    ],
+                    "targetFieldName": "mdmstate"
+                },
+                {
+                    "childFieldMappings": [],
+                    "fieldCleanseRules": [],
+                    "instanceId": "",
+                    "parentFieldMappingId": null,
+                    "sourceFieldNames": [
+                        "city"
+                    ],
+                    "targetFieldName": "mdmcity"
+                },
+                {
+                    "childFieldMappings": [],
+                    "fieldCleanseRules": [],
+                    "instanceId": "",
+                    "parentFieldMappingId": null,
+                    "sourceFieldNames": [
+                        "zipcode"
+                    ],
+                    "targetFieldName": "mdmzipcode"
+                }
+            ],
+            "fieldCleanseRules": [],
+            "instanceId": "07a8eb50ca8611e9aab842010a840015",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [],
+            "targetFieldName": "mdmaddress"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "customerId"
+            ],
+            "targetFieldName": "mdmcustomerid"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "dba"
+            ],
+            "targetFieldName": "mdmdba"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "registereddate"
+            ],
+            "targetFieldName": "mdmregisterdate"
+        },
+        {
+            "childFieldMappings": [],
+            "fieldCleanseRules": [],
+            "instanceId": "",
+            "parentFieldMappingId": null,
+            "sourceFieldNames": [
+                "statetaxid"
+            ],
+            "targetFieldName": "mdmstatetaxid"
+        }
+    ],
+    "mappingType": "ENTITY_MAPPING",
+    "snapshotCreationTime": "2019-11-01T04:53:48.497Z",
+    "stagingEntityType": "customer",
+    "stagingSchema": {
+        "mdmConnectorId": "81f60a40ca5f11e9af7e42010a840080",
+        "mdmCreated": "2019-08-29T13:29:10.688Z",
+        "mdmCreatedUser": "robson.poffo@totvs.com",
+        "mdmCrosswalkTemplate": {
+            "mdmCrossreference": {
+                "customer": [
+                    "customerId"
+                ]
+            }
+        },
+        "mdmDuplicateFieldsFromJoin": [],
+        "mdmEntityType": "mdmStagingSchema",
+        "mdmExportData": false,
+        "mdmExportDate": null,
+        "mdmExportUser": "",
+        "mdmFlexible": true,
+        "mdmId": "92f728160daa7020f3596304a47f24b7",
+        "mdmIsPlaceholder": false,
+        "mdmLastUpdated": "2019-08-29T17:52:06.301Z",
+        "mdmLookupTable": false,
+        "mdmRealtime": false,
+        "mdmSchemaMapping": {
+            "mdmAnalyzer": null,
+            "mdmAnonymizationStrategy": null,
+            "mdmESIndex": null,
+            "mdmEnabled": null,
+            "mdmFieldData": null,
+            "mdmFields": null,
+            "mdmFormat": null,
+            "mdmHidden": false,
+            "mdmIgnoreAbove": null,
+            "mdmNormalizer": null,
+            "mdmNorms": null,
+            "mdmProperties": {
+                "name@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "address1@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "customerId@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "registereddate@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "city@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "zipcode@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "taxid@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "citytaxid@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "dba@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "statetaxid@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "customerId": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                },
+                "state@string": {
+                    "mdmAnalyzer": null,
+                    "mdmAnonymizationStrategy": null,
+                    "mdmESIndex": null,
+                    "mdmEnabled": null,
+                    "mdmFieldData": null,
+                    "mdmFields": null,
+                    "mdmFormat": null,
+                    "mdmHidden": false,
+                    "mdmIgnoreAbove": null,
+                    "mdmNormalizer": null,
+                    "mdmNorms": null,
+                    "mdmProperties": null,
+                    "mdmPropertyOrdering": null,
+                    "mdmType": "string"
+                }
+            },
+            "mdmPropertyOrdering": [
+                "customerId"
+            ],
+            "mdmType": null
+        },
+        "mdmStagingMapping": {
+            "analyzer": null,
+            "enabled": null,
+            "fielddata": null,
+            "fields": null,
+            "format": null,
+            "ignore_above": null,
+            "index": null,
+            "normalizer": null,
+            "norms": null,
+            "properties": {
+                "zipcode": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "registereddate": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "dba": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "city": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "address1": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "taxid": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "name": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "customerId": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "citytaxid": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "statetaxid": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                },
+                "state": {
+                    "analyzer": null,
+                    "enabled": null,
+                    "fielddata": null,
+                    "fields": null,
+                    "format": null,
+                    "ignore_above": null,
+                    "index": null,
+                    "normalizer": null,
+                    "norms": null,
+                    "properties": null,
+                    "propertyOrdering": null,
+                    "type": "string"
+                }
+            },
+            "propertyOrdering": [
+                "customerId"
+            ],
+            "type": null
+        },
+        "mdmStagingType": "customer",
+        "mdmStatus": "ACTIVE",
+        "mdmStorageOnly": false,
+        "mdmTenantId": "c295adf0c94011e9a22242010a84007f",
+        "mdmTouchedRawMapping": true,
+        "mdmTypeToCrosswalkTables": {},
+        "mdmUpdatedUser": "robson.poffo@totvs.com",
+        "score": null
+    },
+    "fileName": "carol_ai_ss_mdmcustomer_webapp_customer_20191101_005348"
+}
