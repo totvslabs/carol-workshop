@@ -15,8 +15,7 @@
           "profile": "",
           "properties": {
             "dockerImage": "carol/base-online",
-            "instanceMemory": "1",
-            "instanceVCPUs": "4"
+            "flavor": "c1.micro"
           }
         }
       }

@@ -16,8 +16,7 @@
           "profile": "",
           "properties": {
             "dockerImage": "carol/base-batch",
-            "instanceMemory": "150M",
-            "instanceVCPUs": "0.5"
+            "flavor": "c1.micro"
           }
         },
         "name": "testbatch"
