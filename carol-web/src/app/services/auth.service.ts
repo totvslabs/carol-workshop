@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { carol } from '@carol/carol-sdk/lib/carol';
-import { ThfToolbarProfile } from '@totvs/thf-ui/components/thf-toolbar';
 import * as moment from 'moment';
 import { Observable, Observer } from 'rxjs';
 import { utils } from '@carol/carol-sdk/lib/utils';
+import { httpClient } from '@carol/carol-sdk/lib/http-client';
+import { PoToolbarProfile } from '@po-ui/ng-components';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  sessionObservable: Observable<ThfToolbarProfile> ;
-  sessionObserver: Observer<ThfToolbarProfile> ;
+  sessionObservable: Observable<PoToolbarProfile>;
+  sessionObserver: Observer<PoToolbarProfile>;
 
   constructor(
     private router: Router
@@ -25,22 +26,10 @@ export class AuthService {
     });
   }
 
-  login(username, password) {
-    return carol.login(username, password).then(response => {
-      this.setSession(response, username);
-      return response;
-    });
-  }
-
   setSession(authResult, user) {
     carol.setAuthToken(authResult['access_token']);
 
-    let tokenName;
-    if (utils.getOrganization()) {
-      tokenName = `carol-${utils.getOrganization()}-${utils.getEnvironment()}-token`;
-    } else {
-      tokenName = 'carol-token';
-    }
+    const tokenName = this.getTokenName();
 
     localStorage.setItem(tokenName, authResult['access_token']);
     localStorage.setItem('user', user);
@@ -51,17 +40,23 @@ export class AuthService {
     this.sessionObserver.next(this.buildProfile());
   }
 
+  getTokenName() {
+    if (utils.getOrganization()) {
+      return `carol-${utils.getOrganization()}-${utils.getEnvironment()}-token`;
+    } else {
+      return 'carol-token';
+    }
+  }
+
   getSession(): Observable < any > {
     return this.sessionObservable;
   }
 
   logout() {
     return carol.logout().then(() => {
-      localStorage.removeItem('carol-token');
-      localStorage.removeItem('expires_at');
-      localStorage.removeItem('user');
+      localStorage.clear();
 
-      this.router.navigate(['login']);
+      this.goToLogin(true);
     });
   }
 
@@ -79,10 +74,15 @@ export class AuthService {
     return moment(expiresAt);
   }
 
-  buildProfile(): ThfToolbarProfile {
+  buildProfile(): PoToolbarProfile {
     return {
       avatar: 'assets/images/avatar-24x24.png',
       title: localStorage.getItem('user')
     };
   }
+
+  goToLogin(logout = false) {
+    window.location.href = `${location.origin}/auth?redirect=${encodeURI(location.pathname + location.search)}&env=${httpClient.environment}&org=${httpClient.organization}&logout=${logout}`;
+  }
 }
+

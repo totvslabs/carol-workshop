@@ -1,90 +1,92 @@
-<thf-page-default t-title="Clientes x Pedidos">
+<po-page-default t-title="Clientes x Pedidos">
   <div id="widget-container">
-    <thf-widget id="left-graph">
-      <thf-kendo-chart *ngIf="!loadingGraph"
-        class="thf-md-12"
-        t-title="Pedidos por período"
-        t-height="360"
-        [t-type]="'line'"
-        [t-categories]="categories"
-        [t-series]="graphDataSource">
-      </thf-kendo-chart>
-      <thf-kendo-chart *ngIf="loadingGraph"
-        class="thf-md-12"
+    <po-widget id="left-graph">
+      <!--
+      <po-kendo-chart *ngIf="!loadingGraph"
+        class="po-md-12"
+        p-title="Pedidos por período"
+        p-height="360"
+        [p-type]="'line'"
+        [p-categories]="categories"
+        [p-series]="graphDataSource">
+      </po-kendo-chart>
+      <po-kendo-chart *ngIf="loadingGraph"
+        class="po-md-12"
         t-title="Pedidos por período"
         t-height="360"
         [t-type]="'line'"
         [t-categories]="[]"
         [t-series]="[]">
-      </thf-kendo-chart>
-    </thf-widget>
-    <thf-widget id="right-graph">
+      </po-kendo-chart>
+      -->
+    </po-widget>
+    <po-widget id="right-graph">
       <div class="insight-container">
         <span id="title">Quantidade de clientes</span>
         <span id="value">{{totalSecondInsight}}</span>
       </div>
-    </thf-widget>
+    </po-widget>
   </div>
 
   <div id="grid-container">
-    <thf-widget>
-      <div id="filter-container" class="thf-row">
-        <div class="thf-lg-12">
-          <thf-input
+    <po-widget>
+      <div id="filter-container" class="po-row">
+        <div class="po-lg-12">
+          <po-input
             (t-change)="onChangeFilter($event)"
             t-label="Filtrar Clientes"
             name="filter-combo"
             t-placeholder="Digite o nome do cliente"
           >
-        </thf-input>
+        </po-input>
         </div>
       </div>
 
-      <div id="buttons-container" class="thf-row">
-        <div class="thf-lg-12">
-          <thf-button id="add-new"
+      <div id="buttons-container" class="po-row">
+        <div class="po-lg-12">
+          <po-button id="add-new"
             t-type="primary"
-            [t-disabled]="pendingAction"
+            [p-disabled]="pendingAction"
             (click)="addNew()"
             t-label="Adicionar Novo Cliente">
-          </thf-button>
-          <thf-button id="edit-selected"
+          </po-button>
+          <po-button id="edit-selected"
             (click)="editSelected()"
-            [t-disabled]="selectedRows.length > 1 || !selectedRows.length || pendingAction"
+            [p-disabled]="selectedRows.length > 1 || !selectedRows.length || pendingAction"
             t-label="Editar">
-          </thf-button>
-          <thf-button id="edit-selected"
+          </po-button>
+          <po-button id="edit-selected"
             t-type="danger"
-            [t-disabled]="!selectedRows.length || pendingAction"
+            [p-disabled]="!selectedRows.length || pendingAction"
             (click)="deleteSelected()"
             t-label="Excluir">
-          </thf-button>
+          </po-button>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-12">
-          <thf-table
-            t-checkbox
-            (t-selected)="changeSelectionState($event)"
-            (t-unselected)="changeSelectionState($event)"
-            (t-all-selected)="changeSelectionState($event)"
-            (t-all-unselected)="changeSelectionState($event)"
-            [t-columns]="gridColumns"
-            [t-items]="gridData"
-            [t-loading]="loadingGrid"
-            [t-striped]="true"
+      <div class="po-row">
+        <div class="po-lg-12">
+          <po-table
+            p-checkbox
+            (p-selected)="changeSelectionState($event)"
+            (p-unselected)="changeSelectionState($event)"
+            (p-all-selected)="changeSelectionState($event)"
+            (p-all-unselected)="changeSelectionState($event)"
+            [p-columns]="gridColumns"
+            [p-items]="gridData"
+            [p-loading]="loadingGrid"
+            [p-striped]="true"
           >
-          </thf-table>
+          </po-table>
         </div>
       </div>
-      <app-paginator [records-name]="'Clientes'"
-        [page-size]="pageSize"
-        [current-page]="currentPage"
-        [count-hits]="currentPageHits"
-        [total-hits]="totalHits"
-        (on-change-page)="onChangePage($event)">
+      <app-paginator recordsName="Clientes"
+        [pageSize]="pageSize"
+        [currentPage]="currentPage"
+        [countHits]="currentPageHits"
+        [totalHits]="totalHits"
+        (onChangePage)="onChangePage($event)">
       </app-paginator>
-    </thf-widget>
+    </po-widget>
   </div>
-</thf-page-default>
+</po-page-default>

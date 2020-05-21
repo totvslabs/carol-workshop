@@ -33,7 +33,7 @@ export class AppComponent {
 
     httpClient.addInterceptor('auth', (status, response) => {
       if (status === 401) {
-        this.router.navigate(['login']);
+        this.auth.goToLogin();
       }
     });
   }

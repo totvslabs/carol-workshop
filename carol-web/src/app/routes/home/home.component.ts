@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { ThfNotificationService } from '@totvs/thf-ui';
 
 import * as moment from 'moment';
+import { PoNotificationService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-home',
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private notificationService: ThfNotificationService,
+    private notificationService: PoNotificationService,
     private router: Router
   ) {}
 
@@ -171,7 +171,7 @@ export class HomeComponent implements OnInit {
         // this.http.post(
         //   '/api/v1/queries/named/listcustomers',
         //   {id}
-        // ).subscribe(    
+        // ).subscribe(
           (res: any) => {
             // if(res.hits != undefined && res.hits.length > 0) {
               // const crossWalks = res.hits[0].mdmCrosswalk;

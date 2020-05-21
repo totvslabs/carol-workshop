@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { ThfNotificationService } from '@totvs/thf-ui/services/thf-notification';
 
 import * as moment from 'moment';
+import { PoNotificationService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-manufacture-component',
@@ -26,7 +26,7 @@ export class CustomerComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private authService: AuthService,
-    private thfNotificationService: ThfNotificationService,
+    private poNotificationService: PoNotificationService
   ) {
     this.authService.sessionObservable.subscribe(
       (res) => {
@@ -50,7 +50,7 @@ export class CustomerComponent implements OnInit {
     ).subscribe(
       (res: any) => {
         if (res == undefined) {
-          this.thfNotificationService.information('Connector WebApp não encontrado.');
+          this.poNotificationService.information('Connector WebApp não encontrado.');
           this.router.navigate(['/']);
           return;
         }
@@ -68,7 +68,7 @@ export class CustomerComponent implements OnInit {
     ).subscribe(
       ({hits}: any) => {
         if (!hits.length) {
-          this.thfNotificationService.information('Registro não encontrado');
+          this.poNotificationService.information('Registro não encontrado');
           this.router.navigate(['/']);
           return;
         }
@@ -118,7 +118,7 @@ export class CustomerComponent implements OnInit {
       payload
     ).subscribe(
       () => {
-        this.thfNotificationService.success('Registro salvo com sucesso');
+        this.poNotificationService.success('Registro salvo com sucesso');
         this.router.navigate(['/']);
       }
     );

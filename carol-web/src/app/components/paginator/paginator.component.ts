@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges } from '@angular/core';
-
-import { ThfI18nService } from '@totvs/thf-ui/services/thf-i18n/thf-i18n.service';
-import { EventListener } from '@angular/core/src/debug/debug_node';
+import { PoI18nService } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-paginator',
@@ -33,7 +31,7 @@ export class PaginatorComponent implements OnInit, OnChanges {
     totalPageSize: number;
 
     constructor(
-        private thfI18nService: ThfI18nService
+        private poI18nService: PoI18nService
     ) { }
 
     ngOnInit() {

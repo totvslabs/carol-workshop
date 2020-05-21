@@ -1,19 +1,19 @@
 <div class="paginator-container">
     <form name="form" class="pull-left">
-        <span style="cursor: pointer" class="thf-icon thf-icon-first-page" (click)="goToFirstPage()"></span>
-        <span style="cursor: pointer" class="thf-icon thf-icon-arrow-left" (click)="goToPreviousPage()" *ngIf="(currentPage > 1)"></span>
-        <span style="cursor: pointer" class="thf-icon thf-icon-arrow-left" *ngIf="(currentPage === 1)"></span>
-        <thf-number name="currentPage" (keypress)=eventHandler($event)
+        <span style="cursor: pointer" class="po-icon po-icon-first-page" (click)="goToFirstPage()"></span>
+        <span style="cursor: pointer" class="po-icon po-icon-arrow-left" (click)="goToPreviousPage()" *ngIf="(currentPage > 1)"></span>
+        <span style="cursor: pointer" class="po-icon po-icon-arrow-left" *ngIf="(currentPage === 1)"></span>
+        <po-number name="currentPage" (keypress)=eventHandler($event)
                     [(ngModel)]="currentPage"
                     (t-change)="setPage($event)"
                     t-min="1" [t-max]="lastPage"
                     class="input-paginator"
-                    style="display: inline-block;"></thf-number>
+                    style="display: inline-block;"></po-number>
         de
         {{lastPage}}
-        <span style="cursor: pointer" class="thf-icon thf-icon-arrow-right" (click)="goToNextPage()" *ngIf="currentPage < lastPage"></span>
-        <span style="cursor: pointer" class="thf-icon thf-icon-arrow-right" *ngIf="currentPage >= lastPage"></span>
-        <span style="cursor: pointer" class="thf-icon thf-icon-last-page" (click)="goToLastPage()"></span>
+        <span style="cursor: pointer" class="po-icon po-icon-arrow-right" (click)="goToNextPage()" *ngIf="currentPage < lastPage"></span>
+        <span style="cursor: pointer" class="po-icon po-icon-arrow-right" *ngIf="currentPage >= lastPage"></span>
+        <span style="cursor: pointer" class="po-icon po-icon-last-page" (click)="goToLastPage()"></span>
     </form>
     <div class="pull-right info-paginator">
             <p>{{initalIndexPage}} - {{totalPageSize}} de {{totalHits}} {{ recordsName.toLowerCase() }}</p>

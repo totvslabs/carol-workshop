@@ -5,12 +5,17 @@ import { httpClient } from '@carol/carol-sdk/lib/http-client';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
+import { AuthService } from './auth.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private auth: AuthService
+  ) {}
 
   intercept(req: HttpRequest<any>,
     next: HttpHandler): Observable<HttpEvent<any>> {
@@ -25,14 +30,14 @@ export class AuthInterceptor implements HttpInterceptor {
       return next.handle(cloned).pipe(
         catchError((error: any) => {
           if (error.status === 401) {
-            this.router.navigate(['login']);
+            this.auth.goToLogin();
           }
           return throwError(error);
         })
       );
     } else {
       if (req.url !== '/api/v2/oauth2/token') {
-        this.router.navigate(['login']);
+        this.auth.goToLogin();
       }
       return next.handle(req);
     }

@@ -1,154 +1,154 @@
-<thf-page-default [t-title]="pageTitle">
-  <thf-widget>
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-6 thf-sm-12">
-        <thf-input t-label='Nome'
+<po-page-default [t-title]="pageTitle">
+  <po-widget>
+    <div class="po-row">
+      <div class="po-lg-3 po-md-6 po-sm-12">
+        <po-input t-label='Nome'
           t-required="true"
           name="name"
           [(ngModel)]="customer.name"
         >
-        </thf-input>
+        </po-input>
       </div>
 
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-12 thf-sm-12">
-        <thf-input t-label="Nome Fantasia"
+    <div class="po-row">
+      <div class="po-lg-3 po-md-12 po-sm-12">
+        <po-input t-label="Nome Fantasia"
           [(ngModel)]="customer.dba"
         >
-        </thf-input>
+        </po-input>
       </div>
     </div>
 
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-12 thf-sm-12">
-        <thf-input t-label="ID Cliente"
+    <div class="po-row">
+      <div class="po-lg-3 po-md-12 po-sm-12">
+        <po-input t-label="ID Cliente"
           [(ngModel)]="customer.customerid"
           t-required="true"
           name="customerid"
         >
-        </thf-input>
+        </po-input>
       </div>
     </div>
 
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-12 thf-sm-12">
-        <thf-input t-label="CNPJ"
+    <div class="po-row">
+      <div class="po-lg-3 po-md-12 po-sm-12">
+        <po-input t-label="CNPJ"
           [(ngModel)]="customer.taxid"
           t-required="true"
           name="taxid"
         >
-        </thf-input>
+        </po-input>
       </div>
     </div>
 
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-12 thf-sm-12">
-        <thf-input t-label="Inscrição Estadual"
+    <div class="po-row">
+      <div class="po-lg-3 po-md-12 po-sm-12">
+        <po-input t-label="Inscrição Estadual"
           [(ngModel)]="customer.statetaxid"
         >
-        </thf-input>
+        </po-input>
       </div>
     </div>
 
-    <div class="thf-row">
-      <div class="thf-lg-3 thf-md-12 thf-sm-12">
-        <thf-input t-label="Instrição Municipal"
+    <div class="po-row">
+      <div class="po-lg-3 po-md-12 po-sm-12">
+        <po-input t-label="Instrição Municipal"
           [(ngModel)]="customer.citytaxid"
         >
-        </thf-input>
+        </po-input>
       </div>
     </div>
 
-      <div class="thf-lg-2 thf-md-6 thf-sm-12">
-        <thf-datepicker
+      <div class="po-lg-2 po-md-6 po-sm-12">
+        <po-datepicker
           t-required="true"
           name="registeredDate"
           t-clean="false"
           t-label="Data"
           [(ngModel)]="customer.registereddate"
           t-placeholder="Data Registro">
-        </thf-datepicker>
+        </po-datepicker>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-4 thf-md-12 thf-sm-12">
-          <thf-input t-label="Endereço"
+      <div class="po-row">
+        <div class="po-lg-4 po-md-12 po-sm-12">
+          <po-input t-label="Endereço"
             [(ngModel)]="customer.address1"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-3 thf-md-12 thf-sm-12">
-          <thf-input t-label="Bairro"
+      <div class="po-row">
+        <div class="po-lg-3 po-md-12 po-sm-12">
+          <po-input t-label="Bairro"
             [(ngModel)]="customer.address2"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-4 thf-md-12 thf-sm-12">
-          <thf-input t-label="Complemento"
+      <div class="po-row">
+        <div class="po-lg-4 po-md-12 po-sm-12">
+          <po-input t-label="Complemento"
             [(ngModel)]="customer.address3"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-3 thf-md-12 thf-sm-12">
-          <thf-input t-label="CEP"
+      <div class="po-row">
+        <div class="po-lg-3 po-md-12 po-sm-12">
+          <po-input t-label="CEP"
             [(ngModel)]="customer.zipcode"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-3 thf-md-12 thf-sm-12">
-          <thf-input t-label="Cidade"
+      <div class="po-row">
+        <div class="po-lg-3 po-md-12 po-sm-12">
+          <po-input t-label="Cidade"
             [(ngModel)]="customer.city"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-1 thf-md-12 thf-sm-12">
-          <thf-input t-label="Estado"
+      <div class="po-row">
+        <div class="po-lg-1 po-md-12 po-sm-12">
+          <po-input t-label="Estado"
             [(ngModel)]="customer.state"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
-      <div class="thf-row">
-        <div class="thf-lg-3 thf-md-12 thf-sm-12">
-          <thf-input t-label="País"
+      <div class="po-row">
+        <div class="po-lg-3 po-md-12 po-sm-12">
+          <po-input t-label="País"
             [(ngModel)]="customer.country"
           >
-          </thf-input>
+          </po-input>
         </div>
       </div>
 
     </div>
 
-    <div id="footer" class="thf-row">
-      <div class="thf-lg-12">
-        <thf-button [t-disabled]="missingRequiredData() || posting"
+    <div id="footer" class="po-row">
+      <div class="po-lg-12">
+        <po-button [t-disabled]="missingRequiredData() || posting"
           id="save"
           t-type="primary"
           (click)="saveCustomer()"
           t-label="Salvar">
-        </thf-button>
-        <thf-button id="cancel"
+        </po-button>
+        <po-button id="cancel"
           [t-disabled]="posting"
           (click)="cancel()"
           t-label="Cancelar">
-        </thf-button>
+        </po-button>
       </div>
     </div>
-  </thf-widget>
-</thf-page-default>
+  </po-widget>
+</po-page-default>
