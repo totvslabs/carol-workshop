@@ -82,7 +82,7 @@ export class AuthService {
   }
 
   goToLogin(logout = false) {
-    window.location.href = `${location.origin}/auth?redirect=${encodeURI(location.pathname + location.search)}&env=${httpClient.environment}&org=${httpClient.organization}&logout=${logout}`;
+    window.location.href = `${location.origin}/auth/?redirect=${encodeURI(location.pathname + location.search)}&env=${httpClient.environment}&org=${httpClient.organization}&logout=${logout}`;
   }
 }
 

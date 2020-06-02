@@ -5,7 +5,7 @@
     "ng": "ng",
     "update-model": "node ./node_modules/@carol/carol-sdk/src/update-model",
     "start": "ng serve --port 3000",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
