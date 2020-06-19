@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { ThfToolbarProfile, ThfToolbarAction } from '@totvs/thf-ui';
 import { Observable } from 'rxjs';
+import { PoToolbarProfile, PoToolbarAction } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-base',
@@ -10,14 +10,15 @@ import { Observable } from 'rxjs';
 export class BaseComponent {
 
   menus = [
-    { label: 'Home', link: '/', shortLabel: 'Home', icon: 'thf-icon-home' }
+    { label: 'Dashboard', link: '/' },
+    { label: 'Adicionar Funcionário', link: '/clientes/add'}
   ];
 
-  profile: Observable<ThfToolbarProfile>;
+  profile: Observable<PoToolbarProfile>;
 
-  profileActions: Array<ThfToolbarAction> = [
+  profileActions: Array<PoToolbarAction> = [
     {
-      icon: 'thf-icon-exit',
+      icon: 'po-icon-exit',
       label: 'Exit',
       type: 'danger',
       separator: true,

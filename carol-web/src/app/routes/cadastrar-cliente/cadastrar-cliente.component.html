@@ -1,0 +1,111 @@
+<po-page-default p-title="Cadastrar Cliente">
+
+  <form
+    name="clienteForm"
+    style="width: 600px"
+  >
+    <po-input
+      p-label="Nome"
+      name="nome"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmname"
+    ></po-input>
+
+    <po-input
+      p-label="Nome Fantasia"
+      name="dba"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmdba"
+    ></po-input>
+
+    <po-input
+      p-label="ID Cliente"
+      name="id"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmcustomerid"
+    ></po-input>
+
+    <po-input
+      p-label="CNPJ"
+      name="cnpj"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmtaxid"
+    ></po-input>
+
+    <po-input
+      p-label="Inscrição Estadual"
+      name="ie"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmstatetaxid"
+    ></po-input>
+
+    <po-input
+      p-label="Inscrição Municipal"
+      name="im"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmcitytaxid"
+    ></po-input>
+
+    <p style="width: 50%">
+      <po-datepicker
+        p-label="Data"
+        name="date"
+        [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmregisterdate"
+      ></po-datepicker>
+    </p>
+
+
+    <po-input
+      p-label="Endereço"
+      name="address"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmaddress1"
+    ></po-input>
+
+    <po-input
+      p-label="Bairro"
+      name="address2"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmaddress2"
+    ></po-input>
+
+    <po-input
+      p-label="Complemento"
+      name="address3"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmaddress3"
+    ></po-input>
+
+    <po-input
+      p-label="CEP"
+      name="zip"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmzipcode"
+    ></po-input>
+
+    <po-input
+      p-label="Cidade"
+      name="city"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmcity"
+    ></po-input>
+
+    <p style="width: 30%">
+      <po-input
+        p-label="Estado"
+        name="state"
+        [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmstate"
+      ></po-input>
+    </p>
+
+    <po-input
+      p-label="País"
+      name="country"
+      [(ngModel)]="customer?.mdmGoldenFieldAndValues.mdmaddress.mdmcountry"
+    ></po-input>
+
+    <div style="margin-top: 24px; margin-bottom: 60px;">
+      <po-button style="margin-right: 16px;"
+        p-label="Salvar"
+        (p-click)="save()"
+        p-type="primary"
+      ></po-button>
+      <po-button
+        p-label="Cancelar"
+        (p-click)="goBack()"
+      ></po-button>
+    </div>
+  </form>
+
+
+
+</po-page-default>

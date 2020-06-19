@@ -6,14 +6,14 @@ This project can be used as a seed when you want to start building a Carol app.
 
 This project is constantly maintained and updated by TOTVS Labs. At the same time we encourage you to open a PR with your improvements and contribute.
 
-The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3, it also contains [THF 3.21.0](https://thf.totvs.com.br/home) and some extra features to make your life easier when building a Carol App and retrieving data from Carol.
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3, it also contains [PO-UI 2.3.0](https://po-ui.io/) and some extra features to make your life easier when building a Carol App and retrieving data from Carol.
 
 ### Included Features/Configurations
 
 1. Ability to easily change the target Tenant. For this edit the file `proxy.conf.json` in the root of the project.
 2. Authentication page. 
 3. An interceptor that will automatically add the auth token in every HTTP request.
-4. THF is ready to use.
+4. PO-UI is ready to use.
 5. A script that will connect to your tenant, download the Data Models schema and generate Typescript classes so you have typings in the FE.
 6. A service called `carol.service.ts` which wraps the logic to build queries, save and delete data.
 

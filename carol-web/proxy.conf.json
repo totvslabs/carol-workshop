@@ -1,9 +1,9 @@
 {
   "connectorId": "0a0829172fc2433c9aa26460c31b78f0",
-  "organization": "totvs2",
-  "environment": "totvslabs2",
+  "organization": "poffo",
+  "environment": "webinartest",
   "/api/*": {
-      "target": "https://totvs2.qarol.ai",
+      "target": "https://poffo.carol.ai",
       "secure": true,
       "logLevel": "debug",
       "changeOrigin": true

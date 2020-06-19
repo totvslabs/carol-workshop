@@ -5,36 +5,34 @@ import { httpClient } from '@carol/carol-sdk/lib/http-client';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
+import { AuthService } from './auth.service';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private authService: AuthService) {}
 
   intercept(req: HttpRequest<any>,
     next: HttpHandler): Observable<HttpEvent<any>> {
 
     const idToken = httpClient.authToken;
 
+    let newReq = req;
     if (idToken) {
-      const cloned = req.clone({
+      newReq = req.clone({
         headers: req.headers.set('Authorization', 'Bearer ' + idToken.replace(/\"/g, ''))
       });
-
-      return next.handle(cloned).pipe(
-        catchError((error: any) => {
-          if (error.status === 401) {
-            this.router.navigate(['login']);
-          }
-          return throwError(error);
-        })
-      );
-    } else {
-      if (req.url !== '/api/v2/oauth2/token') {
-        this.router.navigate(['login']);
-      }
-      return next.handle(req);
     }
+    return next.handle(newReq).pipe(
+      catchError((error: any) => {
+        if (error.status === 401) {
+          this.authService.goToLogin();
+        }
+        return throwError(error);
+      })
+    );
   }
 }

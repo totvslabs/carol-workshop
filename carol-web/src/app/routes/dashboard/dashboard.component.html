@@ -1,0 +1,70 @@
+<po-page-default p-title="Clientes x Pedidos">
+
+
+  <div class="po-row">
+    <div class="po-lg-6">
+      <po-chart
+        [p-series]="chartSeries"
+        p-title="Clientes com maior score"
+      ></po-chart>
+    </div>
+    <div class="po-lg-6">
+      <po-widget
+        class="full"
+        p-title="Total de Clientes Cadastrados"
+      >
+        <div style="text-align: center; margin-top: 130px;">
+          <h1>{{customersTotalHits}}</h1>
+        </div>
+
+      </po-widget>
+    </div>
+  </div>
+
+  <div class="po-row" style="margin-top: 16px;">
+    <div class="po-lg-12">
+      <po-widget p-label="Filtrar clientes">
+        <div>
+          <form name="filterForm">
+            <po-input
+              p-placeholder="Digite o nome do cliente"
+              [(ngModel)]="customerName"
+              name="customerName"
+              (p-change)="changePage(1)"
+            ></po-input>
+          </form>
+        </div>
+        <div>
+          <po-button
+            style="margin-right: 16px;"
+            p-label="Adicionar Cliente"
+            p-type="primary"
+            routerLink="/clientes/add"
+          ></po-button>
+          <po-button
+            style="margin-right: 16px;"
+            [p-disabled]="!selectedCustomer"
+            p-label="Editar"
+            [routerLink]="['clientes', selectedCustomer?.mdmId]"
+          ></po-button>
+          <po-button
+            style="margin-right: 16px;"
+            [p-disabled]="!selectedCustomer"
+            p-type="danger"
+            p-label="Remover"
+            (p-click)="removeCustomer(selectedCustomer?.mdmId)"
+          ></po-button>
+        </div>
+        <po-table
+          [p-columns]="columns"
+          [p-items]="customers"
+          (p-selected)="selectedCustomer = $event"
+          [p-selectable]="true"
+          [p-single-select]="true"
+        >
+        </po-table>
+      </po-widget>
+    </div>
+  </div>
+
+</po-page-default>
